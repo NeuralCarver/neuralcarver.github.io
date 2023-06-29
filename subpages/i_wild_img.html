@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="Conditional 3D Shape Generation based on Shape-Image-Text Aligned Latent Representation.">
+  <meta name="keywords" content="3D Generation, Shape-Image-Text Align, 3D Reconstruction">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Conditional 3D Shape Generation based on Shape-Image-Text Aligned Latent Representation</title>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+
+    gtag('config', 'G-PYVRSFMDRL');
+  </script>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="../static/css/bulma.min.css">
+  <link rel="stylesheet" href="../static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="../static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="../static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="../static/css/index.css">
+  <!-- <link rel="icon" href="./static/images/favicon.svg"> -->
+  <link rel="icon" href="../static/images/test3.png">
+
+  <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> -->
+  <script defer src="../static/js/fontawesome.all.min.js"></script>
+  <script src="../static/js/bulma-carousel.min.js"></script>
+  <script src="../static/js/bulma-slider.min.js"></script>
+  <script src="../static/js/index.js"></script>
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+</head>
+<body>
+
+<nav class="navbar" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+
+<!-- SVIP Link -->
+<!--   <div class="navbar-menu">
+    <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
+      <a class="navbar-item" href="https://svip-lab.github.io/">
+      <span class="icon">
+          <i class="fas fa-home"></i>
+      </span>
+      </a>
+  </div> -->
+
+</nav>
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title">Test in the wild</h1>
+
+<!-- Anonymous. -->
+<!--           <div class="is-size-5 publication-authors">
+            <span class="author-block">Anonymous</a></span>
+          </div> -->
+            <!-- <span class="author-block"> -->
+              <!-- <a href="https://jonbarron.info">Jonathan T. Barron</a><sup>2</sup>, -->
+
+<!-- Author List. -->
+<!--           <div class="is-size-5 publication-authors">
+            <span class="author-block">Zibo Zhao</a><sup>1</sup>,</span>
+            <span class="author-block">Wen Liu</a><sup>2</sup>,</span>
+            <span class="author-block">Xin Chen</a><sup>2</sup>,</span>
+            <span class="author-block">Xin Chen</a><sup>2</sup>,</span>
+            <span class="author-block">Rui Wang</a><sup>2</sup>,</span>
+            <span class="author-block">Xianfang Zeng</a><sup>2</sup>,</span>
+            <span class="author-block">Pei Cheng</a><sup>2</sup>,</span>
+            <span class="author-block">Bin Fu</a><sup>2</sup>,</span>
+            <span class="author-block">Tao Chen</a><sup>3</sup>,</span>
+            <span class="author-block">Gang Yu</a><sup>2</sup>,</span>
+            <span class="author-block">Shenghua Gao</a><sup>1,4,5</sup>,</span>
+          </div> -->
+
+<!-- Affiliation. -->
+<!--           <div class="is-size-5 publication-authors">
+            <span class="author-block"><sup>1</sup>ShanghaiTech University,</span>
+            <span class="author-block"><sup>2</sup>Tencent,</span>
+            <span class="author-block"><sup>3</sup>Fudan University,</span>
+            <span class="author-block"><sup>4</sup>Shanghai Engineering Research Center of Intelligent Vision and Imaging,</span>
+            <span class="author-block"><sup>5</sup>Shanghai Engineering Research Center of Energy Efficient and Custom AI IC,</span>
+          </div> -->
+
+<!-- Paper/Video/Code Link. -->
+<!--           <div class="column has-text-centered">
+            <div class="publication-links">
+              <span class="link-block">
+                <a href="https://arxiv.org/pdf/2011.12948"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Paper</span>
+                </a>
+              </span>
+          </div>
+        </div> -->
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- <section class="hero is-light is-small">
+  <div class="hero-body">
+    <div class="columns is-centered">
+      <div class="column">
+        <div class="container is-max-desktop">
+          <div id="myCarousel5" class="carousel slide" data-ride="carousel">
+
+            <ol class="carousel-indicators">
+              <li data-target="#myCarousel5" data-slide-to="0" class="active" style="background-color:gray;">
+              <li data-target="#myCarousel5" data-slide-to="1" style="background-color:gray;"></li>
+              <li data-target="#myCarousel5" data-slide-to="2" style="background-color:gray;"></li>
+              <li data-target="#myCarousel5" data-slide-to="3" style="background-color:gray;"></li>
+              <li data-target="#myCarousel5" data-slide-to="4" style="background-color:gray;"></li>
+            </ol>
+
+            <div class="carousel-inner">
+              <div class="item active" align="center">
+                <iframe src="./static/html/supp_wild/image/3.html" style="height:715px;width:1000px;border:None;transform: scale(0.9);" frameborder="0">
+                </iframe>
+              </div>
+
+              <div class="item" align="center">
+                <iframe src="./static/html/supp_wild/image/4.html" style="height:715px;width:1000px;border:None;transform: scale(0.9);" frameborder="0">
+                </iframe>
+              </div>
+
+              <div class="item" align="center">
+                <iframe src="./static/html/supp_wild/image/5.html" style="height:715px;width:1000px;border:None;transform: scale(0.9);" frameborder="0">
+                </iframe>
+              </div>
+
+              <div class="item" align="center">
+                <iframe src="./static/html/supp_wild/image/6.html" style="height:715px;width:1000px;border:None;transform: scale(0.9);" frameborder="0">
+                </iframe>
+              </div>
+
+              <div class="item" align="center">
+                <iframe src="./static/html/supp_wild/image/7.html" style="height:715px;width:1000px;border:None;transform: scale(0.9);" frameborder="0">
+                </iframe>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="column">
+        <div class="container is-max-desktop">
+          <div id="myCarousel6" class="carousel slide" data-ride="carousel">
+
+            <ol class="carousel-indicators">
+              <li data-target="#myCarousel6" data-slide-to="0" class="active" style="background-color:gray;">
+              <li data-target="#myCarousel6" data-slide-to="1" style="background-color:gray;"></li>
+              <li data-target="#myCarousel6" data-slide-to="2" style="background-color:gray;"></li>
+              <li data-target="#myCarousel6" data-slide-to="3" style="background-color:gray;"></li>
+              <li data-target="#myCarousel6" data-slide-to="4" style="background-color:gray;"></li>
+            </ol>
+
+            <div class="carousel-inner">
+            
+              <div class="item active" align="center">
+                <iframe src="./static/html/supp_wild/text/3.html" style="height:715px;width:1000px;border:None;transform: scale(0.9);" frameborder="0">
+                </iframe>
+              </div>
+
+              <div class="item" align="center">
+                <iframe src="./static/html/supp_wild/text/4.html" style="height:715px;width:1000px;border:None;transform: scale(0.9);" frameborder="0">
+                </iframe>
+              </div>
+
+              <div class="item" align="center">
+                <iframe src="./static/html/supp_wild/text/5.html" style="height:715px;width:1000px;border:None;transform: scale(0.9);" frameborder="0">
+                </iframe>
+              </div>
+
+              <div class="item" align="center">
+                <iframe src="./static/html/supp_wild/text/6.html" style="height:715px;width:1000px;border:None;transform: scale(0.9);" frameborder="0">
+                </iframe>
+              </div>
+
+              <div class="item" align="center">
+                <iframe src="./static/html/supp_wild/text/7.html" style="height:715px;width:1000px;border:None;transform: scale(0.9);" frameborder="0">
+                </iframe>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <h2 class="title is-3" align="center" style="color: rgb(255, 0, 0);"><a href="./index.html">Back to project page</a></h2>
+  </div>
+</section> -->
+
+<section class="hero is-light is-small">
+  <div class="hero-body">
+
+        <div class="container is-max-desktop">
+
+                <iframe src="../static/html/supp_wild/image/3.html" style="height:715px;width:1000px;border:None;transform: scale(.9);" frameborder="0">
+                </iframe>
+
+                <iframe src="../static/html/supp_wild/image/4.html" style="height:715px;width:1000px;border:None;transform: scale(.9);" frameborder="0">
+                </iframe>
+
+                <iframe src="../static/html/supp_wild/image/5.html" style="height:715px;width:1000px;border:None;transform: scale(.9);" frameborder="0">
+                </iframe>
+
+                <iframe src="../static/html/supp_wild/image/6.html" style="height:715px;width:1000px;border:None;transform: scale(.9);" frameborder="0">
+                </iframe>
+
+                <iframe src="../static/html/supp_wild/image/7.html" style="height:715px;width:1000px;border:None;transform: scale(.9);" frameborder="0">
+                </iframe>
+
+        </div>
+
+    <h2 class="title is-3" align="center" style="color: rgb(255, 0, 0);"><a href="./index.html">Back to project page</a></h2>
+  </div>
+</section>
+
+<!-- Paper video. -->
+<!-- <section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Video</h2>
+        <div class="publication-video">
+          <iframe src="https://www.youtube.com/embed/MrKrnHhk8IA?rel=0&amp;showinfo=0"
+                  frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+</section> -->
+
+
+<!-- BibTex -->
+<!-- <section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title">BibTeX</h2>
+    <pre><code>@article{park2021nerfies,
+  author    = {Park, Keunhong and Sinha, Utkarsh and Barron, Jonathan T. and Bouaziz, Sofien and Goldman, Dan B and Seitz, Steven M. and Martin-Brualla, Ricardo},
+  title     = {Nerfies: Deformable Neural Radiance Fields},
+  journal   = {ICCV},
+  year      = {2021},
+}</code></pre>
+  </div>
+</section>
+ -->
+
+<footer class="footer">
+  <div class="container">
+    <div class="content has-text-centered">
+
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+<!--           <p>
+            This website is licensed under a <a rel="license"
+                                                href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
+            Commons Attribution-ShareAlike 4.0 International License</a>.
+          </p> -->
+          <p>
+            The website template was borrowed from  <a
+              href="https://github.com/nerfies/nerfies.github.io">Nerfies</a> and thanks for their awesome implementation.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
