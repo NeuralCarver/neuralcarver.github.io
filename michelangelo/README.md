@@ -1,13 +1,14 @@
-# neuralcarver.github.io
+# Michelangelo
 
 
-This is the repository that contains source code for the [Conditional 3D Shape Generation based on Shape-Image-Text Aligned Latent Representation
+This is the repository that contains source code for the [Michelangelo: Conditional 3D Shape Generation based on Shape-Image-Text Aligned Latent Representation
  website](https://neuralcarver.github.io/michelangelo/).
 
-If you find Conditional 3D Shape Generation based on Shape-Image-Text Aligned Latent Representation
- useful for your work please cite:
-
 # BibTeX
+If you find [Michelangelo: Conditional 3D Shape Generation based on Shape-Image-Text Aligned Latent Representation
+ website](https://neuralcarver.github.io/michelangelo/) useful for your work please cite:
+
+
 ```
 @article{zhao2023conditional,
         title={Conditional 3D Shape Generation based on Shape-Image-Text Aligned Latent Representation}, 
