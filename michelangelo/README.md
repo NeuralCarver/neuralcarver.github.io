@@ -10,12 +10,14 @@ If you find [Michelangelo: Conditional 3D Shape Generation based on Shape-Image-
 
 
 ```
-@article{zhao2023conditional,
-        title={Conditional 3D Shape Generation based on Shape-Image-Text Aligned Latent Representation}, 
-        author={Zibo Zhao and Wen Liu and Xin Chen and Xianfang Zeng and Rui Wang and Pei Cheng and Bin Fu and Tao Chen and Gang Yu and Shenghua Gao},
-        year={2023},
-        archivePrefix={arXiv},
-        primaryClass={cs.CV}
+@misc{zhao2023michelangelo,
+      title={Michelangelo: Conditional 3D Shape Generation based on Shape-Image-Text Aligned Latent Representation}, 
+      author={Zibo Zhao and Wen Liu and Xin Chen and Xianfang Zeng and Rui Wang and Pei Cheng and Bin Fu and Tao Chen and Gang Yu and Shenghua Gao},
+      year={2023},
+      eprint={2306.17115},
+      archivePrefix={arXiv},
+      primaryClass={cs.CV}
+}
 ```
 
 # Website License
